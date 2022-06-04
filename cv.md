@@ -62,6 +62,6 @@ function addBanTracks(){
 #### Language:
 - **Russian** - *Native*
 - **English** - *B1/Intermediate*
-(based on the online test results at ![efset.png](img/efset.png) [www.efset.org](https://www.efset.org/quick-check))
+(based on the online test results at ![efset.jpg](img/efset.jpg) [www.efset.org](https://www.efset.org/quick-check))
 
 ![english.jpg](img/english.jpg)
