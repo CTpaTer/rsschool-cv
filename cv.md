@@ -19,3 +19,49 @@ Three years ago I moved to another city and found a place, where I could combine
 I plan to develop further in the direction of DevOps (an acronym for development and operations), which performs the interaction of developers with information technology service specialists and the mutual integration of their work processes into each other to ensure product quality, so knowledge of Web Development will be very useful to me.
 
 ---
+
+#### Code example:
+```
+function addBanTracks(){
+    let BanTracks = Source.getPlaylistTracks('banArtists', '2XIwTqz4adSo0E2zABTRXK'); 
+    if (BanTracks.length < 1) {
+      console.log('The playlist is empty. The performance is interrupted.');
+      return;
+    } 
+    Cache.append('BannedTracks.json', BanTracks);
+    let BanTracksFile = Cache.read('BannedTracks.json');
+    Filter.dedupTracks(BanTracksFile);
+    Cache.compressTracks(BanTracksFile);
+    Cache.write('BannedTracks.json', BanTracksFile);
+    console.log('Tracks for ban:', BanTracksFile.length);
+    Playlist.removeTracks('2XIwTqz4adSo0E2zABTRXK', BanTracks);
+}
+```
+
+---
+
+#### Skills and Proficiency:
+- HTML, CSS
+- Python
+- JavaScript Basics
+- Git, GitHub
+
+---
+
+#### Courses:
+- cloud engineer from [Yandex Practicum](https://practicum.yandex.ru/ycloud/)
+
+![yandex.jpg](img/yandex.jpg)
+
+- "Python Generation": A Course for Beginners from [stepik.org](https://stepik.org/cert/869759)
+
+![stepic.png](img/stepik.png)
+
+---
+
+#### Language:
+- **Russian** - *Native*
+- **English** - *B1/Intermediate*
+(based on the online test results at ![efset.png](img/efset.png) [www.efset.org](https://www.efset.org/quick-check))
+
+![english.jpg](img/english.jpg)
