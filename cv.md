@@ -22,23 +22,29 @@ I plan to develop further in the direction of DevOps (an acronym for development
 
 #### Code example:
 ```
-function addBanTracks(){
-    let BanTracks = Source.getPlaylistTracks('banArtists', '2XIwTqz4adSo0E2zABTRXK'); 
-    if (BanTracks.length < 1) {
-      console.log('The playlist is empty. The performance is interrupted.');
-      return;
-    } 
-    Cache.append('BannedTracks.json', BanTracks);
-    let BanTracksFile = Cache.read('BannedTracks.json');
-    Filter.dedupTracks(BanTracksFile);
-    Cache.compressTracks(BanTracksFile);
-    Cache.write('BannedTracks.json', BanTracksFile);
-    console.log('Tracks for ban:', BanTracksFile.length);
-    Playlist.removeTracks('2XIwTqz4adSo0E2zABTRXK', BanTracks);
+function GrabPlaylist() {
+
+  const NamePlaylist = 'Daeback';  //Playlist name
+  const ArtID = '37i9dQZF1DX9tPFwDMOaN1'; //Playlist ID
+
+  let tracks = Source.getPlaylistTracks(NamePlaylist, ArtID);
+  console.log('Tracks:', tracks.length);
+  console.log(tracks.map(t => `${t.artists[0].name} - ${t.name}`).join('\n'));
+   Playlist.saveWithReplace({
+    name: NamePlaylist,
+    tracks: tracks,
+    description: Playlist.getDescription(tracks),
+    randomCover: 'update',
+    public: false
+  });
 }
 ```
 
 ---
+
+#### Education:
+**Moscow State Open University**
+Systems engineer (automation and control in technical systems)
 
 #### Skills and Proficiency:
 - HTML, CSS
@@ -51,17 +57,17 @@ function addBanTracks(){
 #### Courses:
 - cloud engineer from [Yandex Practicum](https://practicum.yandex.ru/ycloud/)
 
-![yandex.jpg](img/yandex.jpg)
+![yandex.jpg](assets/img/yandex.jpg)
 
 - "Python Generation": A Course for Beginners from [stepik.org](https://stepik.org/cert/869759)
 
-![stepic.png](img/stepik.png)
+![stepic.png](assets/img/stepik.png)
 
 ---
 
 #### Language:
 - **Russian** - *Native*
 - **English** - *B1/Intermediate*
-(based on the online test results at ![efset.jpg](img/efset.jpg) [www.efset.org](https://www.efset.org/quick-check))
+(based on the online test results at ![efset.jpg](assets/img/efset.jpg) [www.efset.org](https://www.efset.org/quick-check))
 
-![english.jpg](img/english.jpg)
+![english.jpg](assets/img/english.jpg)
