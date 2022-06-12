@@ -1,1 +1,1 @@
-# rsschool-cv
+https://ctpater.github.io/rsschool-cv/
