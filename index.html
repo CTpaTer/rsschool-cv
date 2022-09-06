@@ -83,7 +83,7 @@
 
                                 const NamePlaylist = 'Daeback';  //Playlist name
                                 const ArtID = '37i9dQZF1DX9tPFwDMOaN1'; //Playlist ID
-                              
+
                                 let tracks = Source.getPlaylistTracks(NamePlaylist, ArtID);
                                 console.log('Tracks:', tracks.length);
                                 console.log(tracks.map(t =&gt; `${t.artists[0].name} - ${t.name}`).join('\n'));
