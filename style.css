@@ -3,7 +3,7 @@
     }
     
     html {
-        scroll-behavior: smooth; 
+        scroll-behavior: smooth;
     }
     .root {
         --dark-gray-color: #505050;
